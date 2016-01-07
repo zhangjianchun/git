@@ -1,0 +1,92 @@
+基本设置：
+git config --global user.name "zhangjianchun"             # 配置用户名（必须的）
+git config --global user.email "113274179@qq.com"         # 配置邮件（必须的）
+
+git config --global gui.encoding utf-8			  # 配置 编码 解决gitk乱码
+git config --global core.editor emacs			  # 配置文本编辑器 默认会使用操作系统指定的默认编辑器(这里改emacs）
+
+git config --global merge.tool vimdiff			  # 差异分析工具 默认会使用操作系统指定的默认
+git config --list					  # 检查已有的配置信息
+
+git config user.name					  # 查看某个配置
+$ cd D:/xxx/xx						  # 设置目录版本跟踪管理库位置（必须的）
+$ cd ..							  # 返回上一目录
+$ mkdir java						  # 新建个java文件夹
+$ touch .aa						  # 新建个.aa文件
+
+git init                                                  # 初始化本地git仓库（创建新仓库）（必须的）
+
+基本操作++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git status                                                # 查看当前版本状态（是否修改，是否暂存至index，是否提交）
+git add xyz                                               # 添加xyz文件至index
+git add .                                                 # 增加当前子目录下所有更改过的文件至index
+
+git commit -m 'abc'                                       # 提交
+git commit --amend -m '123'                               # 合并上一次提交（用于反复修改）
+git commit -am 'xxx'                                      # 将add和commit合为一步
+
+git reset HEAD xxxxx.xx					  # 取消暂存index
+git checkout -- xxxx.xxx				  # 取消未暂存的修改 条命令有些危险 撤消未暂存的修改了
+
+git reset --hard HEAD                                     # 将当前版本重置为HEAD（通常用于merge失败回退）
+git reset --hard HEAD^					  # 版本回退操作上一个，^^上两个。
+git reset --hard HEAD~100				  # 版本回退100个版本
+
+git reflog						  # 获取版本号  61c9479 HEAD@{1}: commit: 增加了4
+git reset --hard 61c9479				  # 恢复到61c9479
+git reset --hard HEAD@{1}				  # 恢复到HEAD@{1}和上面一样的
+
+gir rm 001.txt						  # 把文件目录中的001.txt文件删了
+git checkout 001.txt					  # 版本库中恢复此文件到目录中
+
+查看------------------------------------------------------------------------------------------------------------------------
+git log                                                   # 显示提交日志
+git log -1                                                # 显示1行日志 -n为n行 git log -5
+
+git log --stat                                            # 显示提交日志及相关变动文件
+git log -p -m
+git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容
+git show dfb02                                            # 可只用commitid的前几位
+git show HEAD                                             # 显示HEAD提交日志
+git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本
+git tag                                                   # 显示已存在的tag
+git tag -a v2.0 -m 'xxx'                                  # 增加v2.0的tag
+git show v2.0                                             # 显示v2.0的日志及详细内容
+git log v2.0                                              # 显示v2.0的日志
+git diff                                                  # 显示所有未添加至index的变更
+git diff --cached                                         # 显示所有已添加index但还未commit的变更
+git diff HEAD^                                            # 比较与上一个版本的差异
+git diff HEAD -- ./lib                                    # 比较与HEAD版本lib目录的差异
+git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的
+git diff origin/master..master --stat 
+git show master@{yesterday}                               # 显示master分支昨天的状态
+git log --pretty=format:'%h %s' --graph                   # 图示提交日志
+
+分支***************************************************************************************************************************
+
+git branch testing					  # 新建一个名为 testing 的分支
+git checkout testing					  # 切换到testing分支
+git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出
+git branch                                                # 显示本地分支
+git branch -a                                             # 显示所有分支
+git branch -r                                             # 显示所有原创分支
+git merge testing					  # 合并testing分支至当前分支
+git branch --merged                                       # 显示所有已合并到当前分支的分支
+git branch --no-merged                                    # 显示所有未合并到当前分支的分支
+git branch -d testing					  # 删除testing分支 
+
+网络/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+git remote						  # 查看当前配置有哪些远程仓库
+git remote -v						  # 查看当前的远程库 显示对应的克隆地址
+
+git clone git://github.com/zhangjianchun/swift.git	  # clone远程仓库到本地
+
+git fetch origin					  # 抓取远程仓库中的所有更新 不合并到当前工作分支
+git pull						  # 抓取数据下来，然后将远端分支自动合并到本地仓库中当前分支
+git push origin master					  # 把本地的 master 分支推送到 origin 服务器上
+
+git remote ad  # 新建个远端仓库
+git remote rm paul					  # 移除paul远端仓库
+**************************************************************************************************************************
+$ cd ~/.ssh						  # 再 ls 看有没有SSH 公钥 .pub 后缀的文件就是公钥，另一个文件则是密钥
+$ ssh-keygen
