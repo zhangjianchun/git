@@ -33,7 +33,7 @@ git reset --hard HEAD^					  # 版本回退操作上一个，^^上两个。
 git reset --hard HEAD~100				  # 版本回退100个版本
 
 git reflog						  # 获取版本号  61c9479 HEAD@{1}: commit: 增加了4
-git reset --hard 61c9479				  # 恢复到61c9479
+git reset --hard 61c9479		git		  # 恢复到61c9479
 git reset --hard HEAD@{1}				  # 恢复到HEAD@{1}和上面一样的
 
 gir rm 001.txt						  # 把文件目录中的001.txt文件删了
