@@ -1,6 +1,6 @@
 基本设置：
 git config --global user.name "zhangjianchun"             # 配置用户名（必须的）
-git config --global user.email "113274179@qq.com"         # 配置邮件（必须的）
+git config --global user.email "113xxxx9@qq.com"         # 配置邮件（必须的）
 
 git config --global gui.encoding utf-8			  # 配置 编码 解决gitk乱码
 git config --global core.editor emacs			  # 配置文本编辑器 默认会使用操作系统指定的默认编辑器(这里改emacs）
