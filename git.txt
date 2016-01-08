@@ -40,6 +40,7 @@ gir rm 001.txt						  # 把文件目录中的001.txt文件删了
 git checkout 001.txt					  # 版本库中恢复此文件到目录中
 
 查看------------------------------------------------------------------------------------------------------------------------
+git ls-files						  # 显示管理目录文件
 git log                                                   # 显示提交日志
 git log -1                                                # 显示1行日志 -n为n行 git log -5
 
@@ -79,7 +80,7 @@ git branch -d testing					  # 删除testing分支
 git remote						  # 查看当前配置有哪些远程仓库
 git remote -v						  # 查看当前的远程库 显示对应的克隆地址
 
-git clone git://github.com/zhangjianchun/swift.git	  # clone远程仓库到本地
+git clone git://github.com/zhangjianchun/swift.git	  # clone远程仓库到本地 http(s):// 或者 git@github.com:zhanxxxxxx
 
 git fetch origin					  # 抓取远程仓库中的所有更新 不合并到当前工作分支
 git pull						  # 抓取数据下来，然后将远端分支自动合并到本地仓库中当前分支
@@ -98,4 +99,8 @@ ssh-keygen						  # 生成 SSH 公钥 .pub 后缀的文件就是公钥，另一个文件则是密钥
 
 先要求你确认保存公钥的位置（.ssh/id_rsa），然后它会让你重复一个密码两次，如果不想在使用公钥的时候输入密码，可以留空。
 如果有公钥会提示 覆盖 Overwrite (y/n)?
-						
+
+标签 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+git tag v1.4-lw						  # 新建了 v1.4-1w 标签
+git tag							  # 查看标签
+git show 						  # 查看此标签信息，就只有相应的提交对象摘要						
