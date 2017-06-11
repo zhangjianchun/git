@@ -1,0 +1,1277 @@
+/*******************************************************
+  常用样式
+*******************************************************/
+.clear:after {
+  content: "";
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: block;
+}
+/*盒子模型*/
+.border-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.content-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/*常用浮动与定位*/
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.pos-real {
+  position: relative;
+}
+.pos-absl {
+  position: absolute;
+}
+/*字体颜色*/
+.font-c-red {
+  color: #a60000;
+}
+.font-c-blue {
+  color: #0E90E0;
+}
+.font-c-gray {
+  color: #8C9195;
+}
+.font-c-black {
+  color: #262626;
+}
+.font-c-Lblack {
+  color: #414141;
+}
+.font-c-gray2 {
+  color: #8f8f8f;
+}
+/*字体对齐*/
+.txt-left {
+  text-align: left;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-cent {
+  text-align: center;
+}
+.ver-mid {
+  vertical-align: middle;
+}
+/*字体大小*/
+.f0 {
+  font-size: 0;
+}
+.f12 {
+  font-size: 12px;
+}
+.f13 {
+  font-size: 13px;
+}
+.f14 {
+  font-size: 14px;
+}
+.f15 {
+  font-size: 15px;
+}
+.f16 {
+  font-size: 16px;
+}
+.f17 {
+  font-size: 17px;
+}
+.f18 {
+  font-size: 18px;
+}
+/*顶部空隙*/
+.has-top {
+  margin-top: 15px;
+}
+.has-top2 {
+  padding-top: 15px;
+}
+/*左右空隙*/
+.has-side {
+  padding: 0 15px;
+}
+.has-outSide {
+  margin: 0 15px;
+}
+/*底部空隙*/
+.has-bottom {
+  marggin-bottom: 15px;
+}
+.has-bottom2 {
+  padding-bottom: 15px;
+}
+/*隐藏多余字体*/
+.txt-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*显示与隐藏*/
+.show {
+  display: block !important;
+}
+.inline-show {
+  display: inline-block;
+}
+.flex-show {
+  display: flex;
+}
+.hide {
+  display: none !important;
+}
+.over-hide {
+  overflow: hidden;
+}
+/*边框*/
+.border-top {
+  border-top: 1px solid #d9d9d9;
+}
+.border-bottom {
+  border-bottom: 1px solid #d9d9d9;
+}
+.border-all {
+  border: 1px solid #d9d9d9;
+}
+/*边框颜色*/
+/*******************************************************
+  模块样式
+*******************************************************/
+/*白色基本块*/
+.form-block {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #d9d9d9;
+}
+.form-block.form-hasPadding {
+  padding: 0 15px;
+}
+.form-block.form-hasTop {
+  margin-top: 15px;
+}
+.form-block.form-paddBotm {
+  padding-bottom: 15px;
+}
+/*通用大标题*/
+.normal-title {
+  height: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  padding: 0 15px;
+  font-size: 16px;
+}
+/*一般表单顶部标题*/
+.inputTitle {
+  height: 34px;
+  line-height: 34px;
+  padding-top: 5px;
+  /*font-weight: 300;*/
+  font-size: 15px;
+}
+.inputTitle .rightCount {
+  float: right;
+  height: 100%;
+  line-height: inherit;
+  font-weight: 400;
+  color: #8f8f8f;
+}
+.inputTitle .rightCount.addTopic {
+  font-size: 0;
+}
+.inputTitle .rightCount.addTopic:after {
+  content: " ";
+  display: block;
+  width: 15px;
+  height: 34px;
+  background: url("../../src/assets/img/topicAdd-btn.png") right center no-repeat;
+  background-size: 15px 15px;
+}
+/*一般表单*/
+.input.input-hasTop {
+  margin-top: 15px;
+}
+.input .weui-cells {
+  margin-top: 0;
+  border: 1px solid #d9d9d9;
+}
+.input .weui-cells:before,
+.input .weui-cells:after {
+  display: none;
+}
+.input .weui-cells .weui-cell {
+  padding: 7px 5px 7px;
+}
+.input .weui-cells .weui-cell .weui-input {
+  font-size: 14px;
+}
+/*标题在同一行的表单*/
+.input-hasTitle .input-title {
+  flex: 0 0 74px;
+  font-size: 15px;
+}
+.input-hasTitle .input-area .weui-cells {
+  margin-top: 0;
+}
+.input-hasTitle .input-area .weui-cells .vux-x-input {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 7px 5px 7px;
+  border: 1px solid #d9d9d9;
+}
+.input-hasTitle .input-area .weui-cells .vux-x-input .weui-input {
+  font-size: 14px;
+}
+.input-hasTitle .input-desc .item {
+  margin-left: 5px;
+  font-size: 15px;
+}
+.input-hasTitle .input-select .item {
+  font-size: 15px;
+}
+.input-hasTitle .input-select .item .weui-cells {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 0;
+}
+.input-hasTitle .input-select .item .weui-cells:before,
+.input-hasTitle .input-select .item .weui-cells:after {
+  display: none;
+}
+.input-hasTitle .input-select .item .weui-cells .normal-selector {
+  height: 38px;
+  padding-left: 5px;
+  padding-right: 15px;
+  position: relative;
+  font-size: 14px;
+  color: #8f8f8f;
+}
+.input-hasTitle .input-select .item .weui-cells .normal-selector:after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+  transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+  position: relative;
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 13px;
+}
+.input-hasTitle .item {
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+}
+/*textarea描述与选择图片*/
+.pic-area {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+}
+.pic-area .input .weui-cells {
+  border: none;
+}
+.pic-area .input textarea {
+  font-size: 15px;
+  min-height: 0;
+}
+.pic-area .input .addImgs {
+  padding-bottom: 8px;
+}
+.pic-area .input .addImgs:after {
+  content: "";
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: block;
+}
+.pic-area .input .addImgs a {
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+.pic-area .input .addImgs a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pic-area .input .addImgs .imgAddBtn {
+  background: url("../../src/assets/img/imgAdd-btn.png") 0 0 no-repeat;
+  background-size: 100%;
+  position: relative;
+  font-size: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+}
+.pic-area .input .addImgs .imgAddBtn input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  opacity: 0;
+}
+/*列单元*/
+.list-box .list {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 35px 10px 15px;
+  overflow: hidden;
+  position: relative;
+}
+.list-box .list:active {
+  background-color: #ECECEC;
+}
+.list-box .list:after {
+  content: " ";
+  position: absolute;
+  left: auto;
+  right: 15px;
+  top: 50%;
+  bottom: auto;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-width: 2px 2px 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+.list-box .list .list-title,
+.list-box .list .list-desc {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-box .list .list-title {
+  color: #0E90E0;
+  font-size: 15px;
+}
+.list-box .list .list-desc {
+  color: #8C9195;
+}
+.list-box .list .list-s-title {
+  font-size: 12px;
+  color: #8C9195;
+  line-height: 1;
+}
+.list-box .list .list-head {
+  margin-top: 9px;
+}
+.list-box .list .list-head:after {
+  content: "";
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: block;
+}
+.list-box .list .list-head a.head {
+  float: left;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+}
+.list-box .list .list-head a.head img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.list-box .list:last-child {
+  border-bottom: none;
+}
+/*展示列*/
+.moment-list .list {
+  padding: 15px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.moment-list .list-head {
+  flex: 0 0 50px;
+}
+.moment-list .list-head .head {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.moment-list .list-head .head img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.moment-list .list-content .content .user {
+  padding-right: 60px;
+  position: relative;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #0E90E0;
+  height: 20px;
+  line-height: 20px;
+}
+.moment-list .list-content .content .user span.time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  line-height: 20px;
+  color: #8f8f8f;
+  font-size: 14px;
+}
+.moment-list .list-content .content .desc {
+  min-height: 20px;
+  line-height: 20px;
+  color: #262626;
+  font-size: 14px;
+  overflow: hidden;
+  max-height: 60px;
+  text-overflow: ellipsis;
+}
+.moment-list .list-content .content .img {
+  margin-top: 5px;
+  overflow: hidden;
+  font-size: 0;
+}
+.moment-list .list-content .content .img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.moment-list .list-content .content .tools {
+  padding-top: 10px;
+  font-size: 0;
+}
+.moment-list .list-content .content .tools:after {
+  content: "";
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: block;
+}
+.moment-list .list-content .content .tools .del {
+  float: left;
+  height: 100%;
+  font-size: 14px;
+  color: #0E90E0;
+}
+.moment-list .list-content .content .tools i {
+  float: right;
+  height: 15px;
+  width: 15px;
+  margin-left: 29px;
+  margin-top: 3px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.moment-list .list-content .content .tools i.share {
+  background-image: url("../../src/assets/img/meet-share-1.png");
+}
+.moment-list .list-content .content .tools i.like {
+  background-image: url("../../src/assets/img/meet-like-1.png");
+}
+.moment-list .list-content .content .tools i.comment {
+  background-image: url("../../src/assets/img/meet-common-1.png");
+}
+.moment-list .list-content .content .tools i.share:active,
+.moment-list .list-content .content .tools i.share.cur {
+  background-image: url("../../src/assets/img/meet-share-2.png");
+}
+.moment-list .list-content .content .tools i.like:active,
+.moment-list .list-content .content .tools i.like.cur {
+  background-image: url("../../src/assets/img/meet-like-2.png");
+}
+.moment-list .list-content .content .tools i.comment:active,
+.moment-list .list-content .content .tools i.comment.cur {
+  background-image: url("../../src/assets/img/meet-common-2.png");
+}
+.moment-list .list-content .content .likeComment {
+  margin-top: 5px;
+  background-color: #f3f3f5;
+  position: relative;
+}
+.moment-list .list-content .content .likeComment .likeList {
+  padding: 0 8px;
+  line-height: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.moment-list .list-content .content .likeComment .likeList a.likeCon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../src/assets/img/meet-like-2.png") center no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.moment-list .list-content .content .likeComment .likeList span {
+  color: #0E90E0;
+  font-size: 14px;
+}
+.moment-list .list-content .content .likeComment .likeList span:after {
+  content: '、';
+}
+.moment-list .list-content .content .likeComment .likeList span:last-child:after {
+  content: '';
+}
+.moment-list .list-content .content .likeComment .commentList {
+  padding: 0 8px;
+  line-height: 30px;
+  border-top: 1px solid #d3d3d3;
+}
+.moment-list .list-content .content .likeComment .commentList .comment {
+  font-size: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.moment-list .list-content .content .likeComment .commentList .comment .userName {
+  color: #0E90E0;
+  vertical-align: middle;
+}
+.moment-list .list-content .content .likeComment .commentList .comment .userName:after {
+  content: ":";
+}
+.moment-list .list-content .content .likeComment .commentList .comment .say {
+  color: #262626;
+}
+.moment-list .list-content .content .likeComment .commonInput {
+  width: 100%;
+  margin-top: 5px;
+  background-color: #FFFFFF;
+  padding-bottom: 10px;
+}
+.moment-list .list-content .content .likeComment .commonInput .inputBox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  height: 60px;
+  padding: 10px 5px;
+  background-color: #FFFFFF;
+}
+.moment-list .list-content .content .likeComment .commonInput .inputBox textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  display: block;
+  resize: none;
+}
+.moment-list .list-content .content .likeComment .commonInput .inputBtn {
+  margin-top: 5px;
+  text-align: right;
+}
+.moment-list .list-content .content .likeComment .commonInput .inputBtn .btn {
+  display: inline-block;
+  height: 30px;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 30px;
+  color: #FFFFFF;
+  width: auto;
+  font-size: 14px;
+}
+/*最近打卡成员*/
+.userList .listTitle {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.userList .list {
+  padding: 15px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.userList .list-head {
+  flex: 0 0 50px;
+}
+.userList .list-head .head {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.userList .list-head .head img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.userList .list-content .content .user {
+  padding-right: 60px;
+  position: relative;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #0E90E0;
+  height: 20px;
+  line-height: 20px;
+}
+.userList .list-content .content .user span.time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  line-height: 20px;
+  color: #8f8f8f;
+  font-size: 14px;
+}
+.userList .list-content .content .desc {
+  min-height: 20px;
+  line-height: 20px;
+  color: #262626;
+  font-size: 14px;
+  overflow: hidden;
+  max-height: 60px;
+  text-overflow: ellipsis;
+}
+.userList .list-content .content .img {
+  margin-top: 5px;
+  overflow: hidden;
+  font-size: 0;
+}
+.userList .list-content .content .img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.userList .list-content .content .tools {
+  padding-top: 10px;
+  font-size: 0;
+}
+.userList .list-content .content .tools:after {
+  content: "";
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: block;
+}
+.userList .list-content .content .tools .del {
+  float: left;
+  height: 100%;
+  font-size: 14px;
+  color: #0E90E0;
+}
+.userList .list-content .content .tools i {
+  float: right;
+  height: 15px;
+  width: 15px;
+  margin-left: 29px;
+  margin-top: 3px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.userList .list-content .content .tools i.share {
+  background-image: url("../../src/assets/img/meet-share-1.png");
+}
+.userList .list-content .content .tools i.like {
+  background-image: url("../../src/assets/img/meet-like-1.png");
+}
+.userList .list-content .content .tools i.comment {
+  background-image: url("../../src/assets/img/meet-common-1.png");
+}
+.userList .list-content .content .tools i.share:active,
+.userList .list-content .content .tools i.share.cur {
+  background-image: url("../../src/assets/img/meet-share-2.png");
+}
+.userList .list-content .content .tools i.like:active,
+.userList .list-content .content .tools i.like.cur {
+  background-image: url("../../src/assets/img/meet-like-2.png");
+}
+.userList .list-content .content .tools i.comment:active,
+.userList .list-content .content .tools i.comment.cur {
+  background-image: url("../../src/assets/img/meet-common-2.png");
+}
+.userList .list-content .content .likeComment {
+  margin-top: 5px;
+  background-color: #f3f3f5;
+  position: relative;
+}
+.userList .list-content .content .likeComment .likeList {
+  padding: 0 8px;
+  line-height: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.userList .list-content .content .likeComment .likeList a.likeCon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../src/assets/img/meet-like-2.png") center no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.userList .list-content .content .likeComment .likeList span {
+  color: #0E90E0;
+  font-size: 14px;
+}
+.userList .list-content .content .likeComment .likeList span:after {
+  content: '、';
+}
+.userList .list-content .content .likeComment .likeList span:last-child:after {
+  content: '';
+}
+.userList .list-content .content .likeComment .commentList {
+  padding: 0 8px;
+  line-height: 30px;
+  border-top: 1px solid #d3d3d3;
+}
+.userList .list-content .content .likeComment .commentList .comment {
+  font-size: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.userList .list-content .content .likeComment .commentList .comment .userName {
+  color: #0E90E0;
+  vertical-align: middle;
+}
+.userList .list-content .content .likeComment .commentList .comment .userName:after {
+  content: ":";
+}
+.userList .list-content .content .likeComment .commentList .comment .say {
+  color: #262626;
+}
+.userList .list-content .content .likeComment .commonInput {
+  width: 100%;
+  margin-top: 5px;
+  background-color: #FFFFFF;
+  padding-bottom: 10px;
+}
+.userList .list-content .content .likeComment .commonInput .inputBox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  height: 60px;
+  padding: 10px 5px;
+  background-color: #FFFFFF;
+}
+.userList .list-content .content .likeComment .commonInput .inputBox textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  display: block;
+  resize: none;
+}
+.userList .list-content .content .likeComment .commonInput .inputBtn {
+  margin-top: 5px;
+  text-align: right;
+}
+.userList .list-content .content .likeComment .commonInput .inputBtn .btn {
+  display: inline-block;
+  height: 30px;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 30px;
+  color: #FFFFFF;
+  width: auto;
+  font-size: 14px;
+}
+.userList .list {
+  margin: 0 15px;
+  padding: 5px 0;
+}
+.userList .list:active {
+  background-color: transparent;
+}
+.userList .list .list-content .user,
+.userList .list .list-content .desc {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.userList .list .list-content .desc {
+  color: #262626;
+  font-size: 12px;
+}
+.userList .list .list-content .user {
+  position: relative;
+  font-size: 16px;
+  color: #0E90E0;
+  font-weight: 400;
+  padding-right: 60px;
+}
+.userList .list .list-content .user .time {
+  position: absolute;
+  font-size: 12px;
+  color: #414141;
+  font-weight: 400;
+  top: 0;
+  right: 0;
+  height: inherit;
+  line-height: inherit;
+}
+/*分享方式*/
+.shareType-box {
+  padding-top: 0.35rem;
+  padding-bottom: 0.27rem;
+}
+.shareType-box .typeItem {
+  text-align: center;
+  font-size: 0;
+}
+.shareType-box .typeItem .icon {
+  display: inline-block;
+  width: 0.50rem;
+  height: 0.50rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.shareType-box .typeItem .icon.typeQr {
+  background-image: url("../../src/assets/img/shareType-qrcode-2.png");
+}
+.shareType-box .typeItem .icon.typeText {
+  background-image: url("../../src/assets/img/shareType-text-2.png");
+}
+.shareType-box .typeItem .icon.typeNone {
+  background-image: url("../../src/assets/img/shareType-none-2.png");
+}
+.shareType-box .typeItem .desc {
+  color: #262626;
+  padding-top: 0.05rem;
+  font-size: 0.14rem;
+}
+.shareType-box .typeItem.active .desc {
+  color: #0E90E0;
+}
+.shareType-box .typeItem.active .icon.typeQr {
+  background-image: url("../../src/assets/img/shareType-qrcode-1.png");
+}
+.shareType-box .typeItem.active .icon.typeText {
+  background-image: url("../../src/assets/img/shareType-text-1.png");
+}
+.shareType-box .typeItem.active .icon.typeNone {
+  background-image: url("../../src/assets/img/shareType-none-1.png");
+}
+/*分享方式展示块*/
+.showBox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+  border: 1px solid #d9d9d9;
+}
+.showBox:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 11px;
+  background: url("../../src/assets/img/shareType-arrow.png") 0 0 no-repeat;
+  top: -11px;
+  left: 13.5%;
+  margin-left: -0.1px;
+}
+.showBox.type0:before {
+  left: 13.5%;
+}
+.showBox.type1:before {
+  left: 50%;
+}
+.showBox.type2:before {
+  left: 83.5%;
+}
+.showBox .title {
+  text-align: center;
+  line-height: 0.20rem;
+  padding: 0.12rem 0;
+  color: #262626;
+  font-size: 0.15rem;
+}
+.showBox .addFile {
+  width: 0.60rem;
+  height: 0.60rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+  font-size: 0;
+  background-image: url("../../src/assets/img/imgAdd-btn.png");
+  background-size: 100%;
+  position: relative;
+}
+.showBox .addFile input {
+  display: block;
+  line-height: 0.60rem;
+  height: 0.60rem;
+  width: 0.60rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.showBox .desc {
+  padding-top: 0.10rem;
+  text-align: center;
+  color: #8C9195;
+  font-size: 0.14rem;
+}
+.showBox .showBox-type1 {
+  margin: 0.10rem;
+}
+.showBox .showBox-type1 .inputTitle {
+  margin-top: 0;
+}
+.showBox .type-display {
+  padding: 0.15rem 0;
+  overflow: hidden;
+}
+.showBox .type-display img {
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  height: 1.50rem;
+}
+/*蓝色按钮*/
+.blueBtn {
+  background-color: #0e90e0 !important;
+  color: #FFFFFF !important;
+  height: 40px !important;
+  line-height: 40px !important;
+}
+.blueBtn:active {
+  background-color: #1183c9 !important;
+  color: #FFFFFF !important;
+}
+/*底部按钮*/
+.bottomBtn {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  bottom: 15px;
+}
+/*textarea输入框*/
+.input-textArea .weui-cells:before,
+.input-textArea .weui-cells:after {
+  display: none;
+}
+.input-textArea .weui-cells {
+  border: 1px solid #d9d9d9;
+}
+.input-textArea .weui-cell {
+  padding: 5px;
+  font-size: 14px;
+}
+.input-textArea textarea {
+  min-height: 73px;
+}
+/*日期选择框*/
+.datePicker {
+  padding: 8px 5px;
+}
+.datePicker .vux-datetime-value {
+  text-align: left;
+  font-size: 14px;
+  height: 23px;
+  line-height: 23px;
+}
+.datePicker .vux-datetime-value:after {
+  transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0) !important;
+  -webkit-transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0) !important;
+  right: 12px !important;
+}
+/*tab切换*/
+.tabHeader {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+.tabHeader .tab-box {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.tabHeader .tab-box .title {
+  text-align: center;
+  width: 85px;
+  height: 100%;
+  line-height: inherit;
+  margin: 0 auto;
+  position: relative;
+  color: #262626;
+}
+.tabHeader .tab-box .title.cur {
+  color: #0E90E0;
+}
+.tabHeader .tab-box .title.cur:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0e90e0;
+}
+/*tabBox里面蓝色标题*/
+.tabBox-title {
+  color: #0E90E0;
+  font-size: 15px;
+  padding-top: 13px;
+  line-height: 1;
+  font-weight: 500;
+}
+/*tabBox里面黑色描述*/
+.tabBox-desc {
+  font-size: 14px;
+  color: #262626;
+  margin-top: 13px;
+  line-height: 18px;
+}
+.tabBox-desc .text {
+  color: inherit;
+  line-height: inherit;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding-bottom: 6px;
+}
+.tabBox-desc .img {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 13px;
+}
+.tabBox-desc .img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/*tabBox里面列表*/
+.tabBox-lessonList a.list {
+  display: block;
+  border-bottom: 1px solid #d9d9d9;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #262626;
+}
+.tabBox-lessonList a.list.ctrl {
+  border-bottom: none;
+  color: #0E90E0;
+  font-size: 13px;
+}
+/*******************************************************
+screen style
+********************************************************/
+/*******************************************************
+main style
+********************************************************/
+#punchIndex {
+  background-color: #F2F1F6;
+}
+/*新建打卡活动首页*/
+.punchIndex .normal-inp .weui-cells {
+  margin-top: 0;
+  border: 1px solid #DDDDDD;
+}
+.punchIndex .normal-inp .weui-cells:before,
+.punchIndex .normal-inp .weui-cells:after {
+  display: none;
+}
+.punchIndex .normal-inp .weui-cells .weui-cell {
+  padding: 8px 5px 7px;
+}
+.punchIndex .normal-labelInp label {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  width: 80px;
+}
+.punchIndex .normal-labelInp .main {
+  margin-left: 80px;
+  height: 40px;
+  line-height: 40px;
+}
+.punchIndex .normal-labelInp .main .inpBox {
+  height: 40px;
+  line-height: inherit;
+  overflow: hidden;
+}
+.punchIndex .normal-labelInp .main .inpBox .x-inputBox {
+  padding: 0;
+  border: 1px solid #dddddd;
+}
+.punchIndex .normal-labelInp .main .txtBox {
+  height: 100%;
+  line-height: inherit;
+}
+/*打卡活动详细页顶部样式*/
+.punchDetail {
+  background-color: #EFEFF4;
+  /*标题*/
+  /*三个按钮*/
+  /*价格信息与规则*/
+}
+.punchDetail .normal-title {
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 900;
+}
+.punchDetail .normal-itemBar {
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: #d9d9d9;
+}
+.punchDetail .normal-itemBar .border-item {
+  position: relative;
+}
+.punchDetail .normal-itemBar .border-item:before,
+.punchDetail .normal-itemBar .border-item:after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 40px;
+  top: 50%;
+  left: 0;
+  margin-top: -20px;
+  background-color: #f5f5f5;
+}
+.punchDetail .normal-itemBar .border-item:after {
+  left: auto;
+  right: 0;
+}
+.punchDetail .normal-itemBar .item {
+  padding: 9px 0;
+  text-align: center;
+  line-height: 1;
+  font-size: 0;
+}
+.punchDetail .normal-itemBar .item .item-icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: #ffffff no-repeat center;
+  background-size: 100%;
+}
+.punchDetail .normal-itemBar .item .item-icon.icon-time {
+  background-image: url("../../src/assets/img/itemBar-time.png");
+}
+.punchDetail .normal-itemBar .item .item-icon.icon-day {
+  background-image: url("../../src/assets/img/itemBar-day.png");
+}
+.punchDetail .normal-itemBar .item .item-icon.icon-money {
+  background-image: url("../../src/assets/img/itemBar-money.png");
+}
+.punchDetail .normal-itemBar .item .item-desc,
+.punchDetail .normal-itemBar .item .item-value {
+  height: 15px;
+  line-height: 15px;
+  color: #919599;
+}
+.punchDetail .normal-itemBar .item .item-desc {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.punchDetail .normal-itemBar .item .item-value {
+  padding-top: 5px;
+  color: #0e90e0;
+  font-size: 12px;
+}
+.punchDetail .normal-info {
+  padding: 0 15px;
+  line-height: 20px;
+  color: #888888;
+  font-size: 14px;
+  color: #a60000;
+  font-weight: 600;
+}
+.punchDetail .normal-info .info {
+  line-height: inherit;
+  color: #8f8f8f;
+  font-size: 12px;
+}
+/*修改信息*/
+.me-info {
+  height: 100%;
+  background-color: #FFFFFF;
+}
+.me-info .head-row {
+  padding: 17px 0;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+.me-info .head-row .label {
+  float: left;
+  font-size: 15px;
+  color: #262626;
+  font-weight: 400;
+  height: 100%;
+  line-height: inherit;
+}
+.me-info .head-row .head {
+  float: right;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+.me-info .head-row .head img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
