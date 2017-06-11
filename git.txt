@@ -76,6 +76,7 @@ git merge testing					  # 合并testing分支至当前分支
 git branch --merged                                       # 显示所有已合并到当前分支的分支
 git branch --no-merged                                    # 显示所有未合并到当前分支的分支
 git branch -d testing					  # 删除testing分支 
+<<<<<<< Updated upstream
 暂时搁置！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 git stash						  # 储藏工作目录的中间状态(不提交)也就是你修改过的被追踪的文件和暂存的变更
 git stash list						  # 查看现有的储藏空间
@@ -83,6 +84,10 @@ git stash apply						  # 返回之前储藏空间前
 git stash apply stash@{2}				  # 返回指定储藏空间 前
 git stash drop stash@{0					  # 移除 储藏空间
 
+=======
+git stash						  # 储藏工作目录的中间状态(不提交)也就是你修改过的被追踪的文件和暂存的变更
+git stash list						  # 查看现有的储藏
+>>>>>>> Stashed changes
 
 网络/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 git remote						  # 查看当前配置有哪些远程仓库
@@ -113,7 +118,11 @@ git tag v1.4-lw						  # 新建了 v1.4-1w 标签
 git tag							  # 查看标签
 git show v1.4-1w					  # 查看此标签信息，就只有相应的提交对象摘要	
 git tag -a v1.5 -m 'my version 1.4'			  # 新建含附注标签，	
+<<<<<<< Updated upstream
 git tag -s v1.5 -m 'my version 1.4'			  # 新建含GDG附注标签，	
 
 git filter-branch --tree-filter 'rm -f passwords.txt' HEAD # 从所有提交中删除passwords.txt文件	
 git filter-branch --subdirectory-filter trunk HEAD        # 将trunk目录设置为新的根目录
+=======
+git tag -s v1.5 -m 'my version 1.4'			  # 新建含GDG附注标签，		
+>>>>>>> Stashed changes
